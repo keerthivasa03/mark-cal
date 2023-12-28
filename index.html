@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form name="form" onsubmit="return calculateAttendance()">
+        <div class="maincon">
+            <h1>Attendance calculator</h1>
+            <div class="con">
+                <div class="tclass">
+                    <label>Total class</label>
+                    <input type="number" name="tolclass">
+                </div>
+                <div class="attendcls">
+                    <label>Attend class</label>
+                    <input type="number" name="attclass">
+                </div>
+                <div class="sub">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                </div>
+                <div class="cur-per">
+                    <label>Current percentage</label>
+                    <input name="curr" type="number" readonly>
+                </div>
+                <div class="skip-class">
+                    <label>How many classes can be skipped</label>
+                    <input name="skip" type="number" readonly>
+                </div>
+                <div class="get-class">
+                    <label>How many classes to get 75%</label>
+                    <input type="number" name="get">
+                </div>
+            </div>
+            <b>*Note: This calculator doesn't calculate the attendance till the end of the sem, It only calculates the attendance to 74.01%</b>
+
+        </div>
+    </form>
+
+    <script>
+        function calculateAttendance() {
+            let tolclass = parseFloat(document.form.tolclass.value);
+            let attclass = parseFloat(document.form.attclass.value);
+
+            let result = (attclass / tolclass) * 100;
+            document.form.curr.value = result.toFixed(2);
+            let count = 0;let count1=0;
+     if (result > 75) {
+          while (result > 75) {
+             tolclass++; 
+             result = (attclass / tolclass) * 100;
+             count++;
+         }
+         document.form.skip.value = count;
+         document.form.get.value = count1;
+         
+      }
+         
+    else
+         {
+                while (result < 74.1) {
+                    tolclass++;
+                    attclass++;
+                    result = (attclass / tolclass) * 100;
+                    count1++;
+                }
+                document.form.get.value = count1;
+                document.form.skip.value = count;
+
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html>
