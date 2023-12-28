@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+
+        }
+
+        .maincon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1,
+        b {
+            color: white;
+        }
+
+        .con {
+            width: 300px;
+            background-color: beige;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        input {
+            float: inline-end;
+
+        }
+
+        .tclass,
+        .attendcls,
+        .sub,
+        .cur-per,
+        .skip-class,
+        .get-class {
+            padding: 10px 0px;
+        }
+
+        b {
+            padding-top: 20px;
+        }
+
+        input[type="numbar"] {
+            padding-top: 5px;
+            border: 1px solid;
+            border-radius: 6px;
+        }
+
+        .sub input {
+            margin-right: 20px;
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 5px;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
     <form name="form" onsubmit="return calculateAttendance()">
         <div class="maincon">
@@ -36,7 +100,8 @@
                     <input type="number" name="get">
                 </div>
             </div>
-            <b>*Note: This calculator doesn't calculate the attendance till the end of the sem, It only calculates the attendance to 74.01%</b>
+            <b>*Note: This calculator doesn't calculate the attendance till the end of the sem, It only calculates the
+                attendance to 74.01%</b>
 
         </div>
     </form>
@@ -48,20 +113,19 @@
 
             let result = (attclass / tolclass) * 100;
             document.form.curr.value = result.toFixed(2);
-            let count = 0;let count1=0;
-     if (result > 75) {
-          while (result > 75) {
-             tolclass++; 
-             result = (attclass / tolclass) * 100;
-             count++;
-         }
-         document.form.skip.value = count;
-         document.form.get.value = count1;
-         
-      }
-         
-    else
-         {
+            let count = 0; let count1 = 0;
+            if (result > 75) {
+                while (result > 75) {
+                    tolclass++;
+                    result = (attclass / tolclass) * 100;
+                    count++;
+                }
+                document.form.skip.value = count;
+                document.form.get.value = count1;
+
+            }
+
+            else {
                 while (result < 74.1) {
                     tolclass++;
                     attclass++;
@@ -77,4 +141,5 @@
         }
     </script>
 </body>
+
 </html>
