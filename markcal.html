@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: black;
+        }
+
+        /* .select-range-div {
+            padding: 100px 20px;
+
+
+        } */
+
+        .size {
+            background-color: gainsboro;
+            border: none;
+
+        }
+
+        .but {
+            margin-right: 10px;
+            margin-top: 10px;
+            padding: 5px 20px;
+        }
+
+        .hii {
+            margin-bottom: 400px;
+        }
+
+        #floatingTextarea {
+            height: 10 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container select-range-div justify-content-center">
+        <form name="form">
+            <div class="row justify-content-center">
+                <h1 class="text-white text-center my-4">GPA CALCULATOR</h1>
+                <div class="col-lg-4 col-md-4  col-sm-6 col-6  mb-2">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="g1" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option value="0">Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="c1" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option selected value="0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2 ">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="g2" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option value="0">Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="c2" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option selected value="0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2 ">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="g3" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option value="0">Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="c3" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option selected value="0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2 ">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="g4" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option value="0">Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="c4" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option selected value="0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2 ">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="g5" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option value="0">Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="c5" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option selected value="0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2 ">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="g6" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option value="0">Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="c6" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option selected value="0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2 ">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="g7" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option value="0">Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="c7" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option selected value="0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2 ">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="g8" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option value="0">Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="c8" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option selected value="0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2 ">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="g9" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option value="0">Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="c9" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option selected value="0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2 ">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="g10" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option value="0">Grade</option>
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4  col-md-4 col-sm-6 col-6 mb-2">
+                    <div class="form-floating">
+                        <select class="form-select size py-1 " id="c10" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option selected value="0">Credits</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-4 my-3 row justify-content-center ">
+
+                    <button type="button" class="btn btn-light  " onclick="calculate()">submit</button>
+
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mb-5 mt-2">
+                <div class="col-lg-3 col-md-2 col-sm-2 col-8 ">
+                    <div class="form-floating hii ">
+                        <textarea class="form-control bg-primary text-white fs-1 text" readonly
+                            placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">GPA</label>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </form>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script>
+    function calculate() {
+
+        var c1 = parseInt(document.getElementById('c1').value);
+        var c2 = parseInt(document.getElementById('c2').value);
+        var c3 = parseInt(document.getElementById('c3').value);
+        var c4 = parseInt(document.getElementById('c4').value);
+        var c5 = parseInt(document.getElementById('c5').value);
+        var c6 = parseInt(document.getElementById('c6').value);
+        var c7 = parseInt(document.getElementById('c7').value);
+        var c8 = parseInt(document.getElementById('c8').value);
+        var c9 = parseInt(document.getElementById('c9').value);
+        var c10 = parseInt(document.getElementById('c10').value);
+        total = c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8 + c9 + c10;
+
+        var g1 = parseInt(document.getElementById('g1').value);
+        var g2 = parseInt(document.getElementById('g2').value);
+        var g3 = parseInt(document.getElementById('g3').value);
+        var g4 = parseInt(document.getElementById('g4').value);
+        var g5 = parseInt(document.getElementById('g5').value);
+        var g6 = parseInt(document.getElementById('g6').value);
+        var g7 = parseInt(document.getElementById('g7').value);
+        var g8 = parseInt(document.getElementById('g8').value);
+        var g9 = parseInt(document.getElementById('g9').value);
+        var g10 = parseInt(document.getElementById('g10').value);
+        var gpa = ((g1 * c1) + (g2 * c2) + (g3 * c3) + (g4 * c4) + (g5 * c5) + (g6 * c6) + (g7 * c7) + (g8 * c8) + (g9 * c9) + (g10 * c10)) / total;
+
+        document.getElementById('floatingTextarea').value = `GPA : ${gpa.toFixed(2)}`;
+    }
+</script>
+
+</html>
